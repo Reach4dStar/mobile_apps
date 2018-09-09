@@ -1,0 +1,128 @@
+//#1  write a program that calculates the hours in a year
+hours_day = 24;
+days_year = 365;
+hours_year = hours_day * days_year;  // 8760 hours_year
+console.log("There are " + hours_year + " " + " hours in a year.");
+There are 8760  hours in a year.
+
+//#2  Write a program for how many minutes are there in a decade
+minutes_hour = 60;
+hours_day = 24;
+days_year = 365;
+decade = 10;
+minutes_decade = minutes_hour * hours_day * days_year * decade; 
+console.log("There are " + minutes_decade + " " + "minutes in a decade.");
+There are 5256000 minutes in a decade.
+
+//#3  write a program of your age in seconds
+age = 53;
+days_year = 365;
+hours_day = 24;
+minutes_hour = 60;
+seconds_minute = 60;
+age_seconds = (age * days_year * hours_day * minutes_hour * seconds_minute) // on exact birthday at 53 years, age_seconds 
+Jan = 31; // 31 days in January
+Feb = 28; // 28 days in February
+Mar = 31; // 31 days in March
+Apr = 30; // 30 days in April
+May = 31; // 31 days in May
+Jun = 30; // 30 days in June
+Jul = 31; // 31 days in July
+Aug = 31; // 31 days in August
+addl_days = (Jan + Feb + Mar + Apr + May + Jun + Jul + Aug) * hours_day * minutes_hour * seconds_minute;
+current_age = age_seconds + addl_days; 
+console.log("My age in seconds is " + current_age + " ");
+My age in seconds is 1692403200 
+
+
+//#4  Cristina's birthday is yesterday.  She is 32 years old.  Calculate her age in milliseconds
+age = 32;
+days_year = 365;
+hours_day = 24;
+minutes_hour = 60;
+seconds_minute = 60;
+milliseconds = 0.001;
+age_milliseconds = age * days_year * hours_day * minutes_hour * milliseconds; 
+console.log("Cristina o's age in milliseconds is  " + age_milliseconds + " ");
+Cristina's age in milliseconds is  16819.2 
+
+//# 5  Create an 11x11 picture using x = land and o = water of the 7 world continents in javascript
+world =  [['o','o','x','o','x','o','o','o','o','o','o'],
+       ['o','o','o','x','o','o','o','x','x','x','x'],
+       ['x','x','x','x','o','o','x','x','x','o','o'],
+       ['o','x','x','x','o','x','x','x','x','x','o'],
+       ['o','o','x','x','o','x','x','x','o','o','o'],
+       ['o','o','x','o','o','x','x','x','o','o','o'],
+       ['o','o','o','x','o','x','x','x','x','o','o'],
+       ['o','o','x','x','o','o','x','o','x','x','o'],
+       ['o','o','o','x','x','o','o','o','x','x','o'],
+       ['o','o','x','x','o','o','x','x','x','x','o'],
+       ['o','o','x','x','x','x','x','x','x','x','o']
+      ]
+      console.log(world[0]);
+      console.log(world[1]);
+      console.log(world[2]);
+      console.log(world[3]);
+      console.log(world[4]);
+      console.log(world[5]);
+      console.log(world[6]);
+      console.log(world[7]);
+      console.log(world[8]);
+      console.log(world[9]);
+      console.log(world[10]);
+      
+[object Array]: ["o", "o", "x", "o", "x", "o", "o", "o", "o", "o", "o"]
+[object Array]: ["o", "o", "o", "x", "o", "o", "o", "x", "x", "x", "x"]
+[object Array]: ["x", "x", "x", "x", "o", "o", "x", "x", "x", "o", "o"]
+[object Array]: ["o", "x", "x", "x", "o", "x", "x", "x", "x", "x", "o"]
+[object Array]: ["o", "o", "x", "x", "o", "x", "x", "x", "o", "o", "o"]
+[object Array]: ["o", "o", "x", "o", "o", "x", "x", "x", "o", "o", "o"]
+[object Array]: ["o", "o", "o", "x", "o", "x", "x", "x", "x", "o", "o"]
+[object Array]: ["o", "o", "x", "x", "o", "o", "x", "o", "x", "x", "o"]
+[object Array]: ["o", "o", "o", "x", "x", "o", "o", "o", "x", "x", "o"]
+[object Array]: ["o", "o", "x", "x", "o", "o", "x", "x", "x", "x", "o"]
+[object Array]: ["o", "o", "x", "x", "x", "x", "x", "x", "x", "x", "o"]
+
+//#6  convert integer to roman nos
+
+function romanize (num) {
+    if (!+num)
+        return NaN;
+    var digits = String(+num).split(""),
+        key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
+               "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
+               "","I","II","III","IV","V","VI","VII","VIII","IX"],
+        roman = "",
+        i = 3;
+    while (i--)
+        roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+    return Array(+digits.join("") + 1).join("M") + roman;
+}
+03:11:56.076 undefined
+03:13:15.122 romanize(21)
+03:13:15.125 "XXI"
+03:14:06.483 romanize(534)
+03:14:06.487 "DXXXIV"
+03:14:25.467 romanize(-10)
+03:14:25.471 "X"
+
+//Song "Beers in the Wall"
+beer_count = 99;
+beer = [ ];
+while (beer_count > 1) {
+    console.log(beer_count + "  bottles of beer in the wall." + beer_count + " bottles of beer! Take one down and pass it around. ");
+        beer_count = beer_count - 1;
+    console.log(beer_count + " bottles of beer on the wall. ");
+        if (beer_count == 1) {
+        console.log(beer_count + "bottle of beer in the wall. " + beer_count + " bottles of beer! Take onde down and pass it arount, no mor bottles of beer!  Go to the store and buy some more, 99 bottles of beer on the wall!");
+        }
+    }
+    
+    // write a program that inputs a year and will output true or false for leap year
+    // Test is the year divisible 4?  is the year divisible by 100?  is the year divisible by 400?  If true to all statements, leap year
+    
+    year = window.prompt("Input a Year : ");
+x = (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+console.log(x);
+
+
